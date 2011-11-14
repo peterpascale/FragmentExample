@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string
+        name="app_name">FragmentSample</string>
+    <string
+        name="pick_label">Pick a Comic Date</string>
+    <string-array
+        name="strip_dates">
+        <item>October 24, 2011</item>
+        <item>October 25, 2011</item>
+        <item>October 26, 2011</item>
+        <item>October 27, 2011</item>
+        <item>October 28, 2011</item>
+        <item>October 29, 2011</item>
+    </string-array>        
+    <string-array
+        name="strip_refs">
+        <item>20111024</item>
+        <item>20111025</item>
+        <item>20111026</item>
+        <item>20111027</item>
+        <item>20111028</item>
+        <item>20111029</item>
+    </string-array>
+</resources>
