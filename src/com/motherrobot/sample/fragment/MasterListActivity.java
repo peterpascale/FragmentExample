@@ -1,6 +1,5 @@
 package com.motherrobot.sample.fragment;
 
-
 import android.app.ListActivity;
 import android.content.Intent;
 import android.net.Uri;
@@ -20,7 +19,6 @@ public class MasterListActivity extends ListActivity {
         setListAdapter(ArrayAdapter.createFromResource(getApplicationContext(),
                 R.array.strip_dates, R.layout.master_list_view));
         final String[] links = getResources().getStringArray(R.array.strip_refs);
-
 
         getListView().setOnItemClickListener(new OnItemClickListener() {
 
