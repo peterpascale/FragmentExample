@@ -26,10 +26,10 @@ public class MasterListActivity extends ListActivity {
             public void onItemClick(AdapterView<?> parent, View view,
                     int position, long id) {
                 String strip = links[position];
-                Intent showContent = new Intent(getApplicationContext(),
+                Intent showStrip = new Intent(getApplicationContext(),
                         DetailViewActivity.class);
-                showContent.setData(Uri.parse(strip));
-                startActivity(showContent);
+                showStrip.setData(Uri.parse(strip));
+                startActivity(showStrip);
             }
         });
     }
