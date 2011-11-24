@@ -1,7 +1,6 @@
 package com.motherrobot.sample.fragment;
 
 import android.app.Fragment;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,19 +9,21 @@ import android.widget.ImageView;
 
 public class DetailViewFragment extends Fragment {
 	
+	private ImageView viewer;
+	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-	    Intent launchingIntent = getActivity().getIntent();
-	    String content = launchingIntent.getData().toString();
-
 	    View view = (View) inflater.inflate(R.layout.detail_view_content, container, true);
-	    ImageView viewer = (ImageView) view.findViewById(R.id.iv_comic);
-	    viewer.setBackgroundResource(matchResourceID(content));
-	    
+	    viewer = (ImageView) view.findViewById(R.id.iv_comic);
 
 	    return view;
 	}
 	
+	public void updateComic(String content) {
+	    if (viewer != null) {
+	    	viewer.setBackgroundResource(matchResourceID(content));
+	    }
+	}
 	
 	private int matchResourceID(String content) {
 		// I should be able to look these up by name, but that wasn't working...
