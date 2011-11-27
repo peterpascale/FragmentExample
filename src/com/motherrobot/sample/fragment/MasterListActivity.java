@@ -1,17 +1,12 @@
 package com.motherrobot.sample.fragment;
 
-import android.app.Activity;
-import android.app.ListActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ArrayAdapter;
+import android.support.v4.app.FragmentActivity;
 
 
-public class MasterListActivity extends Activity implements MasterListFragment.OnListItemSelectedListener {
+public class MasterListActivity extends FragmentActivity implements MasterListFragment.OnListItemSelectedListener {
 
 	@Override
     public void onCreate(Bundle savedInstanceState) {
@@ -28,7 +23,7 @@ public class MasterListActivity extends Activity implements MasterListFragment.O
 		
 		// Load the Fragment in an activity if its not present,
 		// otherwise just update the fragment.
-		DetailViewFragment detailView = (DetailViewFragment) getFragmentManager()
+		DetailViewFragment detailView = (DetailViewFragment) getSupportFragmentManager()
 			.findFragmentById(R.id.fragment_detailview);
 		 
 		if (detailView == null || !detailView.isInLayout()) {
