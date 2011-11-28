@@ -13,7 +13,7 @@ public class MasterListActivity extends FragmentActivity implements MasterListFr
         super.onCreate(savedInstanceState);
 
         // Load the fragment as the content
-        // A regular layout, and layout-land version exists
+        // A regular layout, and 600+ dp version exists
         setContentView(R.layout.master_list_fragment);        
     }
 	
